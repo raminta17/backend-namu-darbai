@@ -1,8 +1,15 @@
 <?php
     function currentDate() {
       //  echo '&copy; 2018-' . date ('Y');
+        $year_web_page_created = 2018;
         $now = new DateTime();
-        echo '&copy; 2018-' . $now -> format('Y');
+        $currentYear =  $now -> format('Y');
+
+        if ($currentYear == $year_web_page_created){
+            echo '&copy;' . $currentYear;
+        } else {
+            echo "&copy; $year_web_page_created - $currentYear";
+        }
     }
 ?>
 <!DOCTYPE html>
